@@ -37,31 +37,30 @@ public class RourestSvr {
         Random random = new Random();
 
         try {
-
-                //serverSocketのinstanceを生成(PORTを引数に)
-			    serverSocket = new ServerSocket(PORT);
+		//serverSocketのinstanceを生成(PORTを引数に)
+		serverSocket = new ServerSocket(PORT);
 
                 //サーバが起動したことをprintlnとgetLocalPort()を
-			    //使用してサーバのターミナルに表示させる
-			    System.out.println("ルーレストサーバーが起動しました(port=" + serverSocket.getLocalPort() + ")");
+		//使用してサーバのターミナルに表示させる
+		System.out.println("ルーレストサーバーが起動しました(port=" + serverSocket.getLocalPort() + ")");
 
-			    //accept()を用いてクライアントからの要求を待ち続ける
+		//accept()を用いてクライアントからの要求を待ち続ける
                 socket = serverSocket.accept();
 
-			    //クライアントがサーバが接続したことをprintlnと
-			    //getRemoteLocalAddress()を使用してサーバのターミナルに表示させる
+		//クライアントがサーバが接続したことをprintlnと
+		//getRemoteLocalAddress()を使用してサーバのターミナルに表示させる
                 System.out.println("ルーレストサーバーに接続されました" + socket.getLocalAddress());
 
-			    //クライアントからの送信されるデータを読み込むためのBufferedReader型の
-			    //インスタンス"in"をInputStreamReaderとgetInputStream()を用いて生成
+		//クライアントからの送信されるデータを読み込むためのBufferedReader型の
+		//インスタンス"in"をInputStreamReaderとgetInputStream()を用いて生成
                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-			    //クライアントへ送信されるデータを書き出すための PrintWriter型の
-			    //インスタンス"out"をPrintWriterとgetOutputStream()を用いて生成
+		//クライアントへ送信されるデータを書き出すための PrintWriter型の
+		//インスタンス"out"をPrintWriterとgetOutputStream()を用いて生成
                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
-			    //クライアントから送信された数を読み取り、格納するdouble型の
-			    //変数genre1を定義
+		//クライアントから送信された数を読み取り、格納するdouble型の
+		//変数genre1を定義
                 double genre1 = Double.parseDouble(in.readLine());
 
                 //文字列リストを格納するためのString型の
