@@ -9,8 +9,8 @@ public class RourestSvr {
     public static final int PORT = 1234; //Well Known 意外の任意のポート番号の指定
 
     public static void main(String args[]) { 	//メインクラスの始まり！
-        ServerSocket serverSocket = null;		//ServerSocket型のserverSocketの定義・初期化
-        Socket socket = null;					//Socket型のsocketの定義・初期化
+        ServerSocket serverSocket = null;	//ServerSocket型のserverSocketの定義・初期化
+        Socket socket = null;			//Socket型のsocketの定義・初期化
         
         //店舗情報をジャンル別にリストで管理
         //日本食
