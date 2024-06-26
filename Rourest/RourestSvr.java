@@ -1,8 +1,8 @@
 package Rourest;
 
-import java.util.*;//乱数システムを利用するためのパッケージの呼び出し
-import java.io.*; //データストリーム、ファイルシステム入出力用のパッケージの呼び出し
-import java.net.*;//ネットワーク・アプリケーションを実装するためのパッケージの呼び出し
+import java.util.*;	//乱数システムを利用するためのパッケージの呼び出し
+import java.io.*;	//データストリーム、ファイルシステム入出力用のパッケージの呼び出し
+import java.net.*;	//ネットワーク・アプリケーションを実装するためのパッケージの呼び出し
 
 public class RourestSvr {
 
